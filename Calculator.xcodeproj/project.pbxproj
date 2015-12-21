@@ -15,6 +15,7 @@
 		84E7FEF91C230AB300B3CEEA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84E7FEF71C230AB300B3CEEA /* LaunchScreen.storyboard */; };
 		84E7FF041C230AB400B3CEEA /* CalculatorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E7FF031C230AB400B3CEEA /* CalculatorTests.m */; };
 		84E7FF0F1C230AB400B3CEEA /* CalculatorUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E7FF0E1C230AB400B3CEEA /* CalculatorUITests.m */; };
+		84E940741C2716990078F5E6 /* LandscapeContoller.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E940731C2716990078F5E6 /* LandscapeContoller.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,8 @@
 		84E7FF0A1C230AB400B3CEEA /* CalculatorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CalculatorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		84E7FF0E1C230AB400B3CEEA /* CalculatorUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CalculatorUITests.m; sourceTree = "<group>"; };
 		84E7FF101C230AB400B3CEEA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84E940721C2716990078F5E6 /* LandscapeContoller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LandscapeContoller.h; sourceTree = "<group>"; };
+		84E940731C2716990078F5E6 /* LandscapeContoller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LandscapeContoller.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,8 +110,10 @@
 				84E7FEF01C230AB300B3CEEA /* ViewController.m */,
 				84E7FEF21C230AB300B3CEEA /* Main.storyboard */,
 				84E7FEF51C230AB300B3CEEA /* Assets.xcassets */,
-				84E7FEF71C230AB300B3CEEA /* LaunchScreen.storyboard */,
 				84E7FEFA1C230AB300B3CEEA /* Info.plist */,
+				84E940721C2716990078F5E6 /* LandscapeContoller.h */,
+				84E940731C2716990078F5E6 /* LandscapeContoller.m */,
+				84E7FEF71C230AB300B3CEEA /* LaunchScreen.storyboard */,
 				84E7FEE91C230AB300B3CEEA /* Supporting Files */,
 			);
 			path = Calculator;
@@ -271,6 +276,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				84E7FEF11C230AB300B3CEEA /* ViewController.m in Sources */,
+				84E940741C2716990078F5E6 /* LandscapeContoller.m in Sources */,
 				84E7FEEE1C230AB300B3CEEA /* AppDelegate.m in Sources */,
 				84E7FEEB1C230AB300B3CEEA /* main.m in Sources */,
 			);
@@ -415,6 +421,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Maxim-developing.Calculator";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -426,6 +433,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Maxim-developing.Calculator";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -496,6 +504,7 @@
 				84E7FF151C230AB400B3CEEA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		84E7FF161C230AB400B3CEEA /* Build configuration list for PBXNativeTarget "CalculatorTests" */ = {
 			isa = XCConfigurationList;
@@ -504,6 +513,7 @@
 				84E7FF181C230AB400B3CEEA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		84E7FF191C230AB400B3CEEA /* Build configuration list for PBXNativeTarget "CalculatorUITests" */ = {
 			isa = XCConfigurationList;
@@ -512,6 +522,7 @@
 				84E7FF1B1C230AB400B3CEEA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

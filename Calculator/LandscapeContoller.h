@@ -1,15 +1,19 @@
 //
-//  ViewController.h
+//  LandscapeContoller.h
 //  Calculator
 //
-//  Created by Admin on 17/12/15.
+//  Created by Admin on 20/12/15.
 //  Copyright © 2015 Maxim. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
-#import "LandscapeContoller.h"
 
-@interface ViewController : UIViewController
+static float selectNumber;
+static int method;
+static BOOL continueCounting = NO;
+static float runningTotal;
+
+@interface LandscapeContoller : UIViewController
 {
     IBOutlet UITextField *Screen;
     IBOutlet UILabel *CurrOperLabel;
@@ -36,6 +40,7 @@
 - (IBAction)calcPercent:(id)sender;
 //- (void)chooseMethod:(int)method;
 - (IBAction)addDot:(id)sender;
+- (IBAction)leftParenthesis:(id)sender;
+- (IBAction)rightParenthesis:(id)sender;
 
 @end
-

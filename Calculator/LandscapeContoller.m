@@ -1,23 +1,19 @@
 //
-//  ViewController.m
+//  LandscapeContoller.m
 //  Calculator
 //
-//  Created by Admin on 17/12/15.
+//  Created by Admin on 20/12/15.
 //  Copyright © 2015 Maxim. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "LandscapeContoller.h"
 
-@interface ViewController ()
-
-@end
-
-@implementation ViewController
+@implementation LandscapeContoller
 
 -(IBAction)number1:(id)sender{
-//    selectNumber *= 10;
-//    selectNumber += 1;
-//    Screen.text = [NSString stringWithFormat:@"%i", selectNumber];
+    //    selectNumber *= 10;
+    //    selectNumber += 1;
+    //    Screen.text = [NSString stringWithFormat:@"%i", selectNumber];
     if (![Screen.text  isEqual: @"0"]) {
         Screen.text = [Screen.text stringByAppendingString:@"1"];
         selectNumber = [Screen.text floatValue];
@@ -34,14 +30,14 @@
         Screen.text = [NSString stringWithFormat:@"2"];
         selectNumber = [Screen.text floatValue];
     }
-//    selectNumber *= 10;
-//    selectNumber += 2;
-//    Screen.text = [NSString stringWithFormat:@"%i", selectNumber];
+    //    selectNumber *= 10;
+    //    selectNumber += 2;
+    //    Screen.text = [NSString stringWithFormat:@"%i", selectNumber];
 }
 -(IBAction)number3:(id)sender{
-//    selectNumber *= 10;
-//    selectNumber += 3;
-//    Screen.text = [NSString stringWithFormat:@"%i", selectNumber];
+    //    selectNumber *= 10;
+    //    selectNumber += 3;
+    //    Screen.text = [NSString stringWithFormat:@"%i", selectNumber];
     if (![Screen.text  isEqual: @"0"]) {
         Screen.text = [Screen.text stringByAppendingString:@"3"];
         selectNumber = [Screen.text floatValue];
@@ -52,9 +48,9 @@
 }
 
 -(IBAction)number4:(id)sender{
-//    selectNumber *= 10;
-//    selectNumber += 4;
-//    Screen.text = [NSString stringWithFormat:@"%i", selectNumber];
+    //    selectNumber *= 10;
+    //    selectNumber += 4;
+    //    Screen.text = [NSString stringWithFormat:@"%i", selectNumber];
     if (![Screen.text  isEqual: @"0"]) {
         Screen.text = [Screen.text stringByAppendingString:@"4"];
         selectNumber = [Screen.text floatValue];
@@ -64,9 +60,9 @@
     }
 }
 -(IBAction)number5:(id)sender{
-//    selectNumber *= 10;
-//    selectNumber += 5;
-//    Screen.text = [NSString stringWithFormat:@"%i", selectNumber];
+    //    selectNumber *= 10;
+    //    selectNumber += 5;
+    //    Screen.text = [NSString stringWithFormat:@"%i", selectNumber];
     if (![Screen.text  isEqual: @"0"]) {
         Screen.text = [Screen.text stringByAppendingString:@"5"];
         selectNumber = [Screen.text floatValue];
@@ -76,9 +72,9 @@
     }
 }
 -(IBAction)number6:(id)sender{
-//    selectNumber *= 10;
-//    selectNumber += 6;
-//    Screen.text = [NSString stringWithFormat:@"%i", selectNumber];
+    //    selectNumber *= 10;
+    //    selectNumber += 6;
+    //    Screen.text = [NSString stringWithFormat:@"%i", selectNumber];
     if (![Screen.text  isEqual: @"0"]) {
         Screen.text = [Screen.text stringByAppendingString:@"6"];
         selectNumber = [Screen.text floatValue];
@@ -88,9 +84,9 @@
     }
 }
 -(IBAction)number7:(id)sender{
-//    selectNumber *= 10;
-//    selectNumber += 7;
-//    Screen.text = [NSString stringWithFormat:@"%i", selectNumber];
+    //    selectNumber *= 10;
+    //    selectNumber += 7;
+    //    Screen.text = [NSString stringWithFormat:@"%i", selectNumber];
     if (![Screen.text  isEqual: @"0"]) {
         Screen.text = [Screen.text stringByAppendingString:@"7"];
         selectNumber = [Screen.text floatValue];
@@ -100,9 +96,9 @@
     }
 }
 -(IBAction)number8:(id)sender{
-//    selectNumber *= 10;
-//    selectNumber += 8;
-//    Screen.text = [NSString stringWithFormat:@"%i", selectNumber];
+    //    selectNumber *= 10;
+    //    selectNumber += 8;
+    //    Screen.text = [NSString stringWithFormat:@"%i", selectNumber];
     if (![Screen.text  isEqual: @"0"]) {
         Screen.text = [Screen.text stringByAppendingString:@"8"];
         selectNumber = [Screen.text floatValue];
@@ -112,9 +108,9 @@
     }
 }
 -(IBAction)number9:(id)sender{
-//    selectNumber *= 10;
-//    selectNumber += 9;
-//    Screen.text = [NSString stringWithFormat:@"%i", selectNumber];
+    //    selectNumber *= 10;
+    //    selectNumber += 9;
+    //    Screen.text = [NSString stringWithFormat:@"%i", selectNumber];
     if (![Screen.text  isEqual: @"0"]) {
         Screen.text = [Screen.text stringByAppendingString:@"9"];
         selectNumber = [Screen.text floatValue];
@@ -124,9 +120,9 @@
     }
 }
 -(IBAction)number0:(id)sender{
-//    selectNumber *= 10;
-//    selectNumber += 0;
-//    Screen.text = [NSString stringWithFormat:@"%i", selectNumber];
+    //    selectNumber *= 10;
+    //    selectNumber += 0;
+    //    Screen.text = [NSString stringWithFormat:@"%i", selectNumber];
     if (![Screen.text  isEqual: @"0"]) {
         Screen.text = [Screen.text stringByAppendingString:@"0"];
         selectNumber = [Screen.text floatValue];
@@ -134,61 +130,64 @@
 }
 
 -(IBAction)times:(id)sender{
-    if (selectNumber != 0) {
-        if (runningTotal == 0 || continueCounting) {
-            runningTotal = selectNumber;
-        } else {
-            [self chooseMethod:method];
-        }
-    }
-    
-    Screen.text = @"0";
-    method = 1;
-    selectNumber = 0;
-    CurrOperLabel.text = @"Current operation is: \"*\"";
+//    if (selectNumber != 0) {
+//        if (runningTotal == 0 || continueCounting) {
+//            runningTotal = selectNumber;
+//        } else {
+//            [self chooseMethod:method];
+//        }
+//    }
+//    
+//    Screen.text = @"0";
+//    method = 1;
+//    selectNumber = 0;
+//    CurrOperLabel.text = @"Current operation is: \"*\"";
+    Screen.text = [Screen.text stringByAppendingString:@"*"];
 }
 -(IBAction)divide:(id)sender{
-    if (selectNumber != 0) {
-        if (runningTotal == 0 || continueCounting) {
-            runningTotal = selectNumber;
-        } else {
-            [self chooseMethod:method];
-        }
-    }
-    
-    Screen.text = @"0";
-    method = 2;
-    selectNumber = 0;
-    CurrOperLabel.text = @"Current operation is: \"/\"";
+//    if (selectNumber != 0) {
+//        if (runningTotal == 0 || continueCounting) {
+//            runningTotal = selectNumber;
+//        } else {
+//            [self chooseMethod:method];
+//        }
+//    }
+//    
+//    Screen.text = @"0";
+//    method = 2;
+//    selectNumber = 0;
+//    CurrOperLabel.text = @"Current operation is: \"/\"";
+    Screen.text = [Screen.text stringByAppendingString:@"/"];
 }
 -(IBAction)subtract:(id)sender{
-    if (selectNumber != 0) {
-        if (runningTotal == 0 || continueCounting) {
-            runningTotal = selectNumber;
-        } else {
-            [self chooseMethod:method];
-        }
-    }
-    
-    Screen.text = @"0";
-    method = 3;
-    selectNumber = 0;
-    CurrOperLabel.text = @"Current operation is: \"-\"";
+//    if (selectNumber != 0) {
+//        if (runningTotal == 0 || continueCounting) {
+//            runningTotal = selectNumber;
+//        } else {
+//            [self chooseMethod:method];
+//        }
+//    }
+//    
+//    Screen.text = @"0";
+//    method = 3;
+//    selectNumber = 0;
+//    CurrOperLabel.text = @"Current operation is: \"-\"";
+    Screen.text = [Screen.text stringByAppendingString:@"-"];
 }
 -(IBAction)plus:(id)sender{
-    if (selectNumber != 0) {
-        if (runningTotal == 0 || continueCounting) {
-            runningTotal = selectNumber;
-        } else {
-            [self chooseMethod:method];
-        }
-    }
-    
-    Screen.text = @"0";
-    method = 4;
-    selectNumber = 0;
-    CurrOperLabel.text = @"Current operation is: \"+\"";
-    
+//    if (selectNumber != 0) {
+//        if (runningTotal == 0 || continueCounting) {
+//            runningTotal = selectNumber;
+//        } else {
+//            [self chooseMethod:method];
+//        }
+//    }
+//    
+//    Screen.text = @"0";
+//    method = 4;
+//    selectNumber = 0;
+//    CurrOperLabel.text = @"Current operation is: \"+\"";
+    Screen.text = [Screen.text stringByAppendingString:@"+"];
 }
 -(IBAction)equals:(id)sender{
     if (selectNumber != 0) {
@@ -229,22 +228,23 @@
 }
 
 - (IBAction)calcPercent:(id)sender {
-    if (selectNumber != 0) {
-        if (runningTotal == 0 || continueCounting) {
-            runningTotal = selectNumber;
-        } else {
-            [self chooseMethod:method];
-        }
-    }
-    
-    Screen.text = @"0";
-    method = 5;
-    selectNumber = 0;
-    CurrOperLabel.text = @"Current operation is: \"%\"";
+//    if (selectNumber != 0) {
+//        if (runningTotal == 0 || continueCounting) {
+//            runningTotal = selectNumber;
+//        } else {
+//            [self chooseMethod:method];
+//        }
+//    }
+//    
+//    Screen.text = @"0";
+//    method = 5;
+//    selectNumber = 0;
+//    CurrOperLabel.text = @"Current operation is: \"%\"";
+    Screen.text = [Screen.text stringByAppendingString:@"%"];
 }
 
 - (void)chooseMethod:(int)method {
-//void chooseMethod(int method) {
+    //void chooseMethod(int method) {
     switch (method) {
         case 1:
             runningTotal *= selectNumber;
@@ -278,30 +278,35 @@
     }
 }
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    
-    [[UIDevice currentDevice] beginGeneratingDeviceOrientationNotifications];
-    
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(orientationDidChanged:) name:UIDeviceOrientationDidChangeNotification object:nil];
-}
-
-- (void)orientationDidChanged: (NSNotification *) notification {
-    UIDeviceOrientation devOrientation = [UIDevice currentDevice].orientation;
-    
-    if (UIDeviceOrientationIsLandscape(devOrientation)) {
-        UIStoryboard *main = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-        LandscapeContoller *landscape = [main instantiateViewControllerWithIdentifier:@"landscape"];
-        
-        [self presentViewController:landscape animated:YES completion:nil];
-    } else if (UIDeviceOrientationIsPortrait(devOrientation)) {
-        [self dismissViewControllerAnimated:YES completion:nil];
+- (IBAction)leftParenthesis:(id)sender {
+    if ([Screen.text characterAtIndex:[Screen.text length] - 1 ] == '+' ||
+        [Screen.text characterAtIndex:[Screen.text length] - 1 ] == '-' ||
+        [Screen.text characterAtIndex:[Screen.text length] - 1 ] == '/' ||
+        [Screen.text characterAtIndex:[Screen.text length] - 1 ] == '*' ||
+        [Screen.text characterAtIndex:[Screen.text length] - 1 ] == '%') {
+        Screen.text = [Screen.text stringByAppendingString:@"("];
+        selectNumber = [Screen.text floatValue];
+    } else if ([Screen.text isEqualToString:@"0"]){
+        Screen.text = [NSString stringWithFormat:@"("];
+        selectNumber = [Screen.text floatValue];
     }
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (IBAction)rightParenthesis:(id)sender {
+    if ([Screen.text characterAtIndex:[Screen.text length] - 1 ] == '1' ||
+        [Screen.text characterAtIndex:[Screen.text length] - 1 ] == '2' ||
+        [Screen.text characterAtIndex:[Screen.text length] - 1 ] == '3' ||
+        [Screen.text characterAtIndex:[Screen.text length] - 1 ] == '4' ||
+        [Screen.text characterAtIndex:[Screen.text length] - 1 ] == '5' ||
+        [Screen.text characterAtIndex:[Screen.text length] - 1 ] == '6' ||
+        [Screen.text characterAtIndex:[Screen.text length] - 1 ] == '7' ||
+        [Screen.text characterAtIndex:[Screen.text length] - 1 ] == '8' ||
+        [Screen.text characterAtIndex:[Screen.text length] - 1 ] == '9' ||
+        ([Screen.text characterAtIndex:[Screen.text length] - 1 ] == '0' &&
+        [Screen.text containsString:@"("])) {
+        Screen.text = [Screen.text stringByAppendingString:@")"];
+        selectNumber = [Screen.text floatValue];
+    }
 }
 
 @end
