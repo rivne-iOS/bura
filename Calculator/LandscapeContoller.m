@@ -190,21 +190,62 @@
     Screen.text = [Screen.text stringByAppendingString:@"+"];
 }
 -(IBAction)equals:(id)sender{
-    if (selectNumber != 0) {
-        if (runningTotal == 0) {
-            runningTotal = selectNumber;
-        } else {
-            [self chooseMethod:method];
+//    if (selectNumber != 0) {
+//        if (runningTotal == 0) {
+//            runningTotal = selectNumber;
+//        } else {
+//            [self chooseMethod:method];
+//        }
+//    }
+//    
+//    method = 0;
+//    selectNumber = 0;
+//    Screen.text = [NSString stringWithFormat:@"%g", runningTotal];
+//    CurrOperLabel.text = @"";
+//    continueCounting = YES;
+    NSString *resultedString = [self findMatchedStringByPattern:@"[(]{1}[1234567890.\\+\\-\\*\\/\\%]+[)]{1}" andString:Screen.text];
+    
+    BOOL find = false;
+    do {
+        find = false;
+        NSString *resultedOperationString = [self findMatchedStringByPattern:@"[1234567890.]+[\\*]{1}[1234567890.]+" andString:resultedString];
+        NSString *savedResultedOperationString = resultedOperationString;
+        
+        if (resultedString != nil) {
+            find = true;
         }
-    }
-    
-    method = 0;
-    selectNumber = 0;
-    Screen.text = [NSString stringWithFormat:@"%g", runningTotal];
-    CurrOperLabel.text = @"";
-    continueCounting = YES;
-    
+        
+        NSString *resultedNumberString = [self findMatchedStringByPattern:@"[1234567890.]+" andString:resultedOperationString];
+        resultedOperationString = [resultedOperationString stringByReplacingOccurrencesOfString:resultedNumberString withString:@""];
+        float firstNumber = [resultedNumberString floatValue];
+        
+        resultedNumberString = [self findMatchedStringByPattern:@"[1234567890.]+" andString:resultedOperationString];
+        resultedOperationString = [resultedOperationString stringByReplacingOccurrencesOfString:resultedNumberString withString:@""];
+        float secondNumber = [resultedNumberString floatValue];
+        
+        integerTotal = firstNumber * secondNumber;
+        
+        Screen.text = [Screen.text stringByReplacingOccurrencesOfString:savedResultedOperationString withString:[NSString stringWithFormat:@"%i", integerTotal]];
+        
+    } while (find);
 }
+
+-(NSString *)findMatchedStringByPattern:(NSString *)inputPattern andString:(NSString *)inputString {
+    NSString *searchedString = inputString;
+    NSRange  searchedRange = NSMakeRange(0, [searchedString length]);
+    NSString *pattern = inputPattern;
+    NSError  *error = nil;
+    NSString *matchText;
+    
+    NSRegularExpression* regex = [NSRegularExpression regularExpressionWithPattern: pattern options:0 error:&error];
+    NSArray* matches = [regex matchesInString:searchedString options:0 range: searchedRange];
+    for (NSTextCheckingResult* match in matches) {
+        matchText = [searchedString substringWithRange:[match range]];
+        NSLog(@"match: %@", matchText);
+    }
+    return matchText;
+}
+
 -(IBAction)allClear:(id)sender{
     
     method = 0;
@@ -272,41 +313,38 @@
 }
 
 - (IBAction)addDot:(id)sender {
-    if (![Screen.text containsString:@"."]) {
         Screen.text = [Screen.text stringByAppendingString:@"."];
-        selectNumber = [Screen.text floatValue];
-    }
 }
 
 - (IBAction)leftParenthesis:(id)sender {
-    if ([Screen.text characterAtIndex:[Screen.text length] - 1 ] == '+' ||
-        [Screen.text characterAtIndex:[Screen.text length] - 1 ] == '-' ||
-        [Screen.text characterAtIndex:[Screen.text length] - 1 ] == '/' ||
-        [Screen.text characterAtIndex:[Screen.text length] - 1 ] == '*' ||
-        [Screen.text characterAtIndex:[Screen.text length] - 1 ] == '%') {
+//    if ([Screen.text characterAtIndex:[Screen.text length] - 1 ] == '+' ||
+//        [Screen.text characterAtIndex:[Screen.text length] - 1 ] == '-' ||
+//        [Screen.text characterAtIndex:[Screen.text length] - 1 ] == '/' ||
+//        [Screen.text characterAtIndex:[Screen.text length] - 1 ] == '*' ||
+//        [Screen.text characterAtIndex:[Screen.text length] - 1 ] == '%') {
+//        Screen.text = [Screen.text stringByAppendingString:@"("];
+//        selectNumber = [Screen.text floatValue];
+//    } else if ([Screen.text isEqualToString:@"0"]){
         Screen.text = [Screen.text stringByAppendingString:@"("];
         selectNumber = [Screen.text floatValue];
-    } else if ([Screen.text isEqualToString:@"0"]){
-        Screen.text = [NSString stringWithFormat:@"("];
-        selectNumber = [Screen.text floatValue];
-    }
+//    }
 }
 
 - (IBAction)rightParenthesis:(id)sender {
-    if ([Screen.text characterAtIndex:[Screen.text length] - 1 ] == '1' ||
-        [Screen.text characterAtIndex:[Screen.text length] - 1 ] == '2' ||
-        [Screen.text characterAtIndex:[Screen.text length] - 1 ] == '3' ||
-        [Screen.text characterAtIndex:[Screen.text length] - 1 ] == '4' ||
-        [Screen.text characterAtIndex:[Screen.text length] - 1 ] == '5' ||
-        [Screen.text characterAtIndex:[Screen.text length] - 1 ] == '6' ||
-        [Screen.text characterAtIndex:[Screen.text length] - 1 ] == '7' ||
-        [Screen.text characterAtIndex:[Screen.text length] - 1 ] == '8' ||
-        [Screen.text characterAtIndex:[Screen.text length] - 1 ] == '9' ||
-        ([Screen.text characterAtIndex:[Screen.text length] - 1 ] == '0' &&
-        [Screen.text containsString:@"("])) {
+//    if ([Screen.text characterAtIndex:[Screen.text length] - 1 ] == '1' ||
+//        [Screen.text characterAtIndex:[Screen.text length] - 1 ] == '2' ||
+//        [Screen.text characterAtIndex:[Screen.text length] - 1 ] == '3' ||
+//        [Screen.text characterAtIndex:[Screen.text length] - 1 ] == '4' ||
+//        [Screen.text characterAtIndex:[Screen.text length] - 1 ] == '5' ||
+//        [Screen.text characterAtIndex:[Screen.text length] - 1 ] == '6' ||
+//        [Screen.text characterAtIndex:[Screen.text length] - 1 ] == '7' ||
+//        [Screen.text characterAtIndex:[Screen.text length] - 1 ] == '8' ||
+//        [Screen.text characterAtIndex:[Screen.text length] - 1 ] == '9' ||
+//        ([Screen.text characterAtIndex:[Screen.text length] - 1 ] == '0' &&
+//        [Screen.text containsString:@"("])) {
         Screen.text = [Screen.text stringByAppendingString:@")"];
         selectNumber = [Screen.text floatValue];
-    }
+//    }
 }
 
 @end
