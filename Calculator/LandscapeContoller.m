@@ -207,7 +207,9 @@
     
     BOOL find = false;
     do {
+        float total;
         find = false;
+        
         NSString *resultedOperationString = [self findMatchedStringByPattern:@"[1234567890.]+[\\*]{1}[1234567890.]+" andString:resultedString];
         NSString *savedResultedOperationString = resultedOperationString;
         
@@ -223,9 +225,11 @@
         resultedOperationString = [resultedOperationString stringByReplacingOccurrencesOfString:resultedNumberString withString:@""];
         float secondNumber = [resultedNumberString floatValue];
         
-        integerTotal = firstNumber * secondNumber;
+        total = firstNumber * secondNumber;
         
-        Screen.text = [Screen.text stringByReplacingOccurrencesOfString:savedResultedOperationString withString:[NSString stringWithFormat:@"%i", integerTotal]];
+        Screen.text = [Screen.text stringByReplacingOccurrencesOfString:savedResultedOperationString withString:[NSString stringWithFormat:@"%g", total]];
+        // * - has dissapeared
+        NSLog(@"%@", [NSString stringWithFormat:@"%g", total]);
         
     } while (find);
 }

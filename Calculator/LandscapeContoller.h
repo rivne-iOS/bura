@@ -12,7 +12,6 @@ static float selectNumber;
 static int method;
 static BOOL continueCounting = NO;
 static float runningTotal;
-int integerTotal;
 
 @interface LandscapeContoller : UIViewController
 {
