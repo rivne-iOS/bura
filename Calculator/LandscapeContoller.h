@@ -13,6 +13,12 @@ static int method;
 static BOOL continueCounting = NO;
 static float runningTotal;
 
+static const int MULTIPLY_OPERATION = 1;
+static const int DIVISION_OPERATION = 2;
+static const int PLUS_OPERATION = 3;
+static const int MINUS_OPERATION = 4;
+static const int PERSENT_OPERATION = 5;
+
 @interface LandscapeContoller : UIViewController
 {
     IBOutlet UITextField *Screen;
