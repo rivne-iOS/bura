@@ -327,7 +327,7 @@
 //    NSString *resultedString = [self findMatchedStringByPattern:@"[(]{1}[1234567890.\\+\\-\\*\\/\\%]+[)]{1}" andString:Screen.text];
     
     do {
-        NSString *resultedString = [self findMatchedStringByPattern:@"[(]{1}[1234567890.\\+\\-\\*\\/\\%]+[)]{1}" andString:Screen.text];
+        NSString *resultedString = [self findMatchedStringByPattern:@"[(]{1}[m1234567890.\\+\\-\\*\\/\\%]+[)]{1}" andString:Screen.text];
         
         NSRange rangeMultiply = [resultedString rangeOfString:@"*"];
         NSRange rangeDivision = [resultedString rangeOfString:@"/"];
@@ -335,49 +335,102 @@
     if (rangeMultiply.location == NSNotFound && rangeDivision.location == NSNotFound) break;
     
         if (rangeMultiply.location != NSNotFound && rangeMultiply.location < rangeDivision.location) {
-            [self executeOperation:MULTIPLY_OPERATION];
+            [self executeOperation:MULTIPLY_OPERATION withResultedString:resultedString];
         } else if (rangeDivision.location != NSNotFound && rangeMultiply.location > rangeDivision.location) {
-            [self executeOperation:DIVISION_OPERATION];
+            [self executeOperation:DIVISION_OPERATION withResultedString:resultedString];
         }
     } while  (YES);
     
     do {
-        NSString *resultedString = [self findMatchedStringByPattern:@"[(]{1}[1234567890.\\+\\-\\*\\/\\%]+[)]{1}" andString:Screen.text];
+        NSRange rangeMinus;
+        NSRange rangePlus;
+        NSString *resultedString = [self findMatchedStringByPattern:@"([(]{1}[m1234567890.\\+\\-\\*\\/\\%]+[)]{1})" andString:Screen.text];
         
-        NSRange rangeMinus = [resultedString rangeOfString:@"-"];
-        NSRange rangePlus = [resultedString rangeOfString:@"+"];
+        NSString *checkOperationString = [self findMatchedStringByPattern:@"[m1234567890.]+[\\-]{1}[m1234567890.]+" andString:resultedString];
+        if (checkOperationString != nil) {
+            rangeMinus = [resultedString rangeOfString:@"-"];
+        } else rangeMinus.location = NSNotFound;
+        checkOperationString = [self findMatchedStringByPattern:@"[m1234567890.]+[\\+]{1}[m1234567890.]+" andString:resultedString];
+        if (checkOperationString != nil) {
+            rangePlus = [resultedString rangeOfString:@"+"];
+        } else rangePlus.location = NSNotFound;
+//        NSRange rangePlus = [resultedString rangeOfString:@"+"];
         
         if (rangeMinus.location == NSNotFound && rangePlus.location == NSNotFound) break;
         
         if (rangeMinus.location != NSNotFound && rangeMinus.location < rangePlus.location) {
-            [self executeOperation:MINUS_OPERATION];
+            [self executeOperation:MINUS_OPERATION withResultedString:resultedString];
         } else if (rangePlus.location != NSNotFound && rangeMinus.location > rangePlus.location) {
-            [self executeOperation:PLUS_OPERATION];
+            [self executeOperation:PLUS_OPERATION withResultedString:resultedString];
         }
     } while (YES);
+    
+    Screen.text = [Screen.text stringByReplacingOccurrencesOfString:@"(" withString:@""];
+    Screen.text = [Screen.text stringByReplacingOccurrencesOfString:@")" withString:@""];
+    
+    do {
+        NSRange rangeMultiply = [Screen.text rangeOfString:@"*"];
+        NSRange rangeDivision = [Screen.text rangeOfString:@"/"];
+        
+        if (rangeMultiply.location == NSNotFound && rangeDivision.location == NSNotFound) break;
+        
+        if (rangeMultiply.location != NSNotFound && rangeMultiply.location < rangeDivision.location) {
+            [self executeOperation:MULTIPLY_OPERATION withResultedString:Screen.text];
+        } else if (rangeDivision.location != NSNotFound && rangeMultiply.location > rangeDivision.location) {
+            [self executeOperation:DIVISION_OPERATION withResultedString:Screen.text];
+        }
+    } while  (YES);
+    
+    do {
+        NSRange rangeMinus;
+        NSRange rangePlus;
+//        NSString *resultedString = [self findMatchedStringByPattern:@"([(]{1}[m1234567890.\\+\\-\\*\\/\\%]+[)]{1})" andString:Screen.text];
+        
+        NSString *checkOperationString = [self findMatchedStringByPattern:@"[m1234567890.]+[\\-]{1}[m1234567890.]+" andString:Screen.text];
+        if (checkOperationString != nil) {
+            rangeMinus = [Screen.text rangeOfString:@"-"];
+        } else rangeMinus.location = NSNotFound;
+        checkOperationString = [self findMatchedStringByPattern:@"[m1234567890.]+[\\+]{1}[m1234567890.]+" andString:Screen.text];
+        if (checkOperationString != nil) {
+            rangePlus = [Screen.text rangeOfString:@"+"];
+        } else rangePlus.location = NSNotFound;
+        //        NSRange rangePlus = [resultedString rangeOfString:@"+"];
+        
+        if (rangeMinus.location == NSNotFound && rangePlus.location == NSNotFound) break;
+        
+        if (rangeMinus.location != NSNotFound && rangeMinus.location < rangePlus.location) {
+            [self executeOperation:MINUS_OPERATION withResultedString:Screen.text];
+        } else if (rangePlus.location != NSNotFound && rangeMinus.location > rangePlus.location) {
+            [self executeOperation:PLUS_OPERATION withResultedString:Screen.text];
+        }
+    } while (YES);
+
+    Screen.text = [Screen.text stringByReplacingOccurrencesOfString:@"m" withString:@"-"];
 }
 
--(void)executeOperation:(int)operation {
-    NSString *resultedString = [self findMatchedStringByPattern:@"[(]{1}[1234567890.\\+\\-\\*\\/\\%]+[)]{1}" andString:Screen.text];
+
+// Evaluate one operation
+-(void)executeOperation:(int)operation withResultedString:(NSString *)resultedString {
+//    NSString *resultedString = [self findMatchedStringByPattern:@"[(]{1}[m1234567890.\\+\\-\\*\\/\\%]+[)]{1}" andString:Screen.text];
     NSString *resultedOperationString = [[NSString alloc] init];
 
 //    do {
         float total;
         switch (operation) {
             case MULTIPLY_OPERATION:
-                resultedOperationString = [self findMatchedStringByPattern:@"[1234567890.]+[\\*]{1}[1234567890.]+" andString:resultedString];
+                resultedOperationString = [self findMatchedStringByPattern:@"[m1234567890.]+[\\*]{1}[m1234567890.]+" andString:resultedString];
                 break;
             case DIVISION_OPERATION:
-                resultedOperationString = [self findMatchedStringByPattern:@"[1234567890.]+[\\/]{1}[1234567890.]+" andString:resultedString];
+                resultedOperationString = [self findMatchedStringByPattern:@"[m1234567890.]+[\\/]{1}[m1234567890.]+" andString:resultedString];
                 break;
             case MINUS_OPERATION:
-                resultedOperationString = [self findMatchedStringByPattern:@"[1234567890.]+[\\-]{1}[1234567890.]+" andString:resultedString];
+                resultedOperationString = [self findMatchedStringByPattern:@"[m1234567890.]+[\\-]{1}[m1234567890.]+" andString:resultedString];
                 break;
             case PLUS_OPERATION:
-                resultedOperationString = [self findMatchedStringByPattern:@"[1234567890.]+[\\+]{1}[1234567890.]+" andString:resultedString];
+                resultedOperationString = [self findMatchedStringByPattern:@"[m1234567890.]+[\\+]{1}[m1234567890.]+" andString:resultedString];
                 break;
             case PERSENT_OPERATION:
-                resultedOperationString = [self findMatchedStringByPattern:@"[1234567890.]+[\\%]{1}[1234567890.]+" andString:resultedString];
+                resultedOperationString = [self findMatchedStringByPattern:@"[m1234567890.]+[\\%]{1}[m1234567890.]+" andString:resultedString];
                 break;
             default:
                 break;
@@ -385,15 +438,31 @@
         NSString *savedResultedOperationString = [resultedOperationString copy];
         
 //        if (resultedOperationString == nil) break;
+    float firstNumber, secondNumber;
+        NSString *resultedNumberString = [self findMatchedStringByPattern:@"([m]{1}[1234567890.]+)|([1234567890.]+)" andString:resultedOperationString];
+    if ([resultedNumberString containsString:@"m"]) {
+        resultedOperationString = [resultedOperationString stringByReplacingOccurrencesOfString:resultedNumberString withString:@"" options:NSLiteralSearch range:[resultedOperationString rangeOfString:resultedNumberString]];
+        resultedNumberString = [resultedNumberString stringByReplacingOccurrencesOfString:@"m" withString:@""];
+        firstNumber = -[resultedNumberString floatValue];
+    } else {
+        resultedOperationString = [resultedOperationString stringByReplacingOccurrencesOfString:resultedNumberString withString:@"" options:NSLiteralSearch range:[resultedOperationString rangeOfString:resultedNumberString]];
+        firstNumber = [resultedNumberString floatValue];
+    }
     
-        NSString *resultedNumberString = [self findMatchedStringByPattern:@"[1234567890.]+" andString:resultedOperationString];
-        resultedOperationString = [resultedOperationString stringByReplacingOccurrencesOfString:resultedNumberString withString:@""];
-        float firstNumber = [resultedNumberString floatValue];
-        
-        resultedNumberString = [self findMatchedStringByPattern:@"[1234567890.]+" andString:resultedOperationString];
-        resultedOperationString = [resultedOperationString stringByReplacingOccurrencesOfString:resultedNumberString withString:@""];
-        float secondNumber = [resultedNumberString floatValue];
-        
+    resultedNumberString = [self findMatchedStringByPattern:@"([m]{1}[1234567890.]+)|([1234567890.]+)" andString:resultedOperationString];
+    if ([resultedNumberString containsString:@"m"]) {
+        resultedOperationString = [resultedOperationString stringByReplacingOccurrencesOfString:resultedNumberString withString:@"" options:NSLiteralSearch range:[resultedOperationString rangeOfString:resultedNumberString]];
+        resultedNumberString = [resultedNumberString stringByReplacingOccurrencesOfString:@"m" withString:@""];
+        secondNumber = -[resultedNumberString floatValue];
+    } else {
+        resultedOperationString = [resultedOperationString stringByReplacingOccurrencesOfString:resultedNumberString withString:@"" options:NSLiteralSearch range:[resultedOperationString rangeOfString:resultedNumberString]];
+        secondNumber = [resultedNumberString floatValue];
+    }
+    
+//        resultedNumberString = [self findMatchedStringByPattern:@"[1234567890.]+" andString:resultedOperationString];
+//        resultedOperationString = [resultedOperationString stringByReplacingOccurrencesOfString:resultedNumberString withString:@""];
+//        secondNumber = [resultedNumberString floatValue];
+    
         switch (operation) {
             case MULTIPLY_OPERATION:
                 total = firstNumber * secondNumber;
@@ -413,10 +482,12 @@
             default:
                 break;
         }
-        
-        Screen.text = [Screen.text stringByReplacingOccurrencesOfString:savedResultedOperationString withString:[NSString stringWithFormat:@"%g", total]];
-        resultedString = [resultedString stringByReplacingOccurrencesOfString:savedResultedOperationString withString:[NSString stringWithFormat:@"%g", total]];
-        
+        if (total < 0)
+            Screen.text = [Screen.text stringByReplacingOccurrencesOfString:savedResultedOperationString withString:[NSString stringWithFormat:@"m%g", -total] options:NSLiteralSearch range:[Screen.text rangeOfString:savedResultedOperationString]];
+        else
+            Screen.text = [Screen.text stringByReplacingOccurrencesOfString:savedResultedOperationString withString:[NSString stringWithFormat:@"%g", total] options:NSLiteralSearch range:[Screen.text rangeOfString:savedResultedOperationString]];
+//        resultedString = [resultedString stringByReplacingOccurrencesOfString:savedResultedOperationString withString:[NSString stringWithFormat:@"%g", total]];
+    
 //    } while (YES);
 }
 
