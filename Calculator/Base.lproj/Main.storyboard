@@ -459,7 +459,7 @@
                                     <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="heightClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="20" y="96" width="98" height="30"/>
+                                    <rect key="frame" x="20" y="96" width="127" height="30"/>
                                 </variation>
                                 <connections>
                                     <action selector="subtract:" destination="hpl-lf-mQU" eventType="touchUpInside" id="9N1-Wn-8Hr"/>
@@ -519,7 +519,7 @@
                                     <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="heightClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="126" y="96" width="98" height="30"/>
+                                    <rect key="frame" x="155" y="96" width="122" height="30"/>
                                 </variation>
                                 <connections>
                                     <action selector="plus:" destination="hpl-lf-mQU" eventType="touchUpInside" id="tx8-tL-fhK"/>
@@ -579,7 +579,7 @@
                                     <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="heightClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="338" y="96" width="98" height="30"/>
+                                    <rect key="frame" x="418" y="96" width="124" height="30"/>
                                 </variation>
                                 <connections>
                                     <action selector="divide:" destination="hpl-lf-mQU" eventType="touchUpInside" id="Xb9-bI-K7b"/>
@@ -594,7 +594,7 @@
                                     <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="heightClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="20" y="172" width="522" height="30"/>
+                                    <rect key="frame" x="20" y="172" width="257" height="30"/>
                                 </variation>
                                 <connections>
                                     <action selector="allClear:" destination="hpl-lf-mQU" eventType="touchUpInside" id="8WG-jF-wCx"/>
@@ -623,40 +623,10 @@
                                     <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="heightClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="126" y="134" width="310" height="30"/>
+                                    <rect key="frame" x="285" y="134" width="257" height="30"/>
                                 </variation>
                                 <connections>
                                     <action selector="equals:" destination="hpl-lf-mQU" eventType="touchUpInside" id="OUF-U8-4PS"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Iv-5d-uuR">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="0.5" colorSpace="calibratedRGB"/>
-                                <color key="tintColor" red="1" green="1" blue="1" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="-/+">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <variation key="heightClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="444" y="134" width="98" height="30"/>
-                                </variation>
-                                <connections>
-                                    <action selector="changeToPosNeg:" destination="hpl-lf-mQU" eventType="touchUpInside" id="wtE-jx-SgV"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yLk-Cm-iTt">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
-                                <color key="tintColor" red="1" green="1" blue="1" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="%">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <variation key="heightClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="444" y="96" width="98" height="30"/>
-                                </variation>
-                                <connections>
-                                    <action selector="calcPercent:" destination="hpl-lf-mQU" eventType="touchUpInside" id="okl-ga-C9F"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YWb-5C-WT1">
@@ -666,7 +636,7 @@
                                 <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="."/>
                                 <variation key="heightClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="20" y="134" width="98" height="30"/>
+                                    <rect key="frame" x="20" y="134" width="257" height="30"/>
                                 </variation>
                                 <connections>
                                     <action selector="addDot:" destination="hpl-lf-mQU" eventType="touchUpInside" id="GCK-JO-Lc6"/>
@@ -681,13 +651,13 @@
                                     <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="heightClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="232" y="96" width="98" height="30"/>
+                                    <rect key="frame" x="285" y="96" width="125" height="30"/>
                                 </variation>
                                 <connections>
                                     <action selector="times:" destination="hpl-lf-mQU" eventType="touchUpInside" id="LQs-K4-b3z"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LRE-Db-1Pa">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LRE-Db-1Pa">
                                 <rect key="frame" x="-25" y="-30" width="97" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -699,7 +669,7 @@
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <state key="normal" title="("/>
                                 <variation key="heightClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="20" y="206" width="46" height="30"/>
+                                    <rect key="frame" x="20" y="206" width="45" height="30"/>
                                 </variation>
                                 <connections>
                                     <action selector="leftParenthesis:" destination="hpl-lf-mQU" eventType="touchUpInside" id="u5d-7b-mBR"/>
@@ -709,7 +679,7 @@
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <state key="normal" title=")"/>
                                 <variation key="heightClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="74" y="206" width="46" height="30"/>
+                                    <rect key="frame" x="73" y="206" width="45" height="30"/>
                                 </variation>
                                 <connections>
                                     <action selector="rightParenthesis:" destination="hpl-lf-mQU" eventType="touchUpInside" id="Kwu-wL-knt"/>
@@ -721,9 +691,160 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="heightClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="20" y="237" width="522" height="21"/>
+                                    <rect key="frame" x="23" y="291" width="522" height="21"/>
                                 </variation>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0IX-Qo-OEs">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <state key="normal" title="Ctan(x)"/>
+                                <variation key="heightClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="285" y="206" width="45" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="ctanxFunction:" destination="hpl-lf-mQU" eventType="touchUpInside" id="KnA-bc-6GS"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ipl-ku-ecG">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <state key="normal" title="Sin(x)"/>
+                                <variation key="heightClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="126" y="206" width="45" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="sinxFunction:" destination="hpl-lf-mQU" eventType="touchUpInside" id="HFC-CA-PBP"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Phq-2a-ILb">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <state key="normal" title="Cos(x)"/>
+                                <variation key="heightClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="179" y="206" width="45" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="cosxFunction:" destination="hpl-lf-mQU" eventType="touchUpInside" id="7V2-by-uor"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Izb-zW-1T1">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <state key="normal" title="Tan(x)"/>
+                                <variation key="heightClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="232" y="206" width="45" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="tanxFunction:" destination="hpl-lf-mQU" eventType="touchUpInside" id="hBs-St-Bez"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lgQ-l6-FO6">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="0.5" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="C">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="heightClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="285" y="172" width="257" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="clear:" destination="hpl-lf-mQU" eventType="touchUpInside" id="xvc-Hn-ISc"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hgk-ct-rso">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                <state key="normal" title="Ctanh(x)"/>
+                                <variation key="heightClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="285" y="237" width="45" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="ctanhFunction:" destination="hpl-lf-mQU" eventType="touchUpInside" id="UAM-Wd-khu"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hKz-GZ-UZ1">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="9"/>
+                                <state key="normal" title="Sinh(x)"/>
+                                <variation key="heightClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="126" y="237" width="45" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="sinhFunction:" destination="hpl-lf-mQU" eventType="touchUpInside" id="3Sc-Vg-Ehu"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AKg-ll-jyh">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                <state key="normal" title="Cosh(x)"/>
+                                <variation key="heightClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="179" y="237" width="45" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="coshFunction:" destination="hpl-lf-mQU" eventType="touchUpInside" id="rXS-p9-Z4l"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YVu-Vu-8Hr">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                <state key="normal" title="Tanh(x)"/>
+                                <variation key="heightClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="232" y="237" width="45" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="tanhFunction:" destination="hpl-lf-mQU" eventType="touchUpInside" id="GuD-bh-DNi"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I1L-sK-MrW">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <state key="normal" title="x^(y)"/>
+                                <variation key="heightClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="497" y="206" width="45" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="power:" destination="hpl-lf-mQU" eventType="touchUpInside" id="DLJ-oi-XdD"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v0F-2c-8Lx">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <state key="normal" title="Ln(x)"/>
+                                <variation key="heightClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="444" y="206" width="45" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="logNatural:" destination="hpl-lf-mQU" eventType="touchUpInside" id="DwY-fk-dsQ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rD1-5f-At4">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <state key="normal" title="PI">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <variation key="heightClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="497" y="237" width="45" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="constantPi:" destination="hpl-lf-mQU" eventType="touchUpInside" id="dcu-fm-tOC"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kZA-oX-WTY">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <state key="normal" title="E">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <variation key="heightClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="444" y="237" width="45" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="constantE:" destination="hpl-lf-mQU" eventType="touchUpInside" id="EUW-sz-e6q"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <variation key="default">
@@ -743,14 +864,25 @@
                                 <exclude reference="i9w-4b-nnK"/>
                                 <exclude reference="0mx-2l-fuR"/>
                                 <exclude reference="Ftf-KO-0Yp"/>
-                                <exclude reference="2Iv-5d-uuR"/>
-                                <exclude reference="yLk-Cm-iTt"/>
                                 <exclude reference="YWb-5C-WT1"/>
                                 <exclude reference="KPc-Pk-G9k"/>
                                 <exclude reference="LRE-Db-1Pa"/>
                                 <exclude reference="ngM-2V-6mY"/>
                                 <exclude reference="Zvx-S6-qG4"/>
                                 <exclude reference="DVt-n2-hih"/>
+                                <exclude reference="0IX-Qo-OEs"/>
+                                <exclude reference="ipl-ku-ecG"/>
+                                <exclude reference="Phq-2a-ILb"/>
+                                <exclude reference="Izb-zW-1T1"/>
+                                <exclude reference="lgQ-l6-FO6"/>
+                                <exclude reference="Hgk-ct-rso"/>
+                                <exclude reference="hKz-GZ-UZ1"/>
+                                <exclude reference="AKg-ll-jyh"/>
+                                <exclude reference="YVu-Vu-8Hr"/>
+                                <exclude reference="I1L-sK-MrW"/>
+                                <exclude reference="v0F-2c-8Lx"/>
+                                <exclude reference="rD1-5f-At4"/>
+                                <exclude reference="kZA-oX-WTY"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=compact">
@@ -770,14 +902,25 @@
                                 <include reference="i9w-4b-nnK"/>
                                 <include reference="0mx-2l-fuR"/>
                                 <include reference="Ftf-KO-0Yp"/>
-                                <include reference="2Iv-5d-uuR"/>
-                                <include reference="yLk-Cm-iTt"/>
                                 <include reference="YWb-5C-WT1"/>
                                 <include reference="KPc-Pk-G9k"/>
                                 <include reference="LRE-Db-1Pa"/>
                                 <include reference="ngM-2V-6mY"/>
                                 <include reference="Zvx-S6-qG4"/>
                                 <include reference="DVt-n2-hih"/>
+                                <include reference="0IX-Qo-OEs"/>
+                                <include reference="ipl-ku-ecG"/>
+                                <include reference="Phq-2a-ILb"/>
+                                <include reference="Izb-zW-1T1"/>
+                                <include reference="lgQ-l6-FO6"/>
+                                <include reference="Hgk-ct-rso"/>
+                                <include reference="hKz-GZ-UZ1"/>
+                                <include reference="AKg-ll-jyh"/>
+                                <include reference="YVu-Vu-8Hr"/>
+                                <include reference="I1L-sK-MrW"/>
+                                <include reference="v0F-2c-8Lx"/>
+                                <include reference="rD1-5f-At4"/>
+                                <include reference="kZA-oX-WTY"/>
                             </mask>
                         </variation>
                     </view>

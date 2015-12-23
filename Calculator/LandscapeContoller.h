@@ -18,6 +18,7 @@ static const int DIVISION_OPERATION = 2;
 static const int PLUS_OPERATION = 3;
 static const int MINUS_OPERATION = 4;
 static const int PERSENT_OPERATION = 5;
+static const int POWER_OPERATION = 6;
 
 @interface LandscapeContoller : UIViewController
 {
@@ -44,9 +45,21 @@ static const int PERSENT_OPERATION = 5;
 -(IBAction)allClear:(id)sender;
 - (IBAction)changeToPosNeg:(id)sender;
 - (IBAction)calcPercent:(id)sender;
-//- (void)chooseMethod:(int)method;
 - (IBAction)addDot:(id)sender;
 - (IBAction)leftParenthesis:(id)sender;
 - (IBAction)rightParenthesis:(id)sender;
+- (IBAction)sinxFunction:(id)sender;
+- (IBAction)cosxFunction:(id)sender;
+- (IBAction)tanxFunction:(id)sender;
+- (IBAction)ctanxFunction:(id)sender;
+- (IBAction)clear:(id)sender;
+- (IBAction)sinhFunction:(id)sender;
+- (IBAction)coshFunction:(id)sender;
+- (IBAction)tanhFunction:(id)sender;
+- (IBAction)ctanhFunction:(id)sender;
+- (IBAction)power:(id)sender;
+- (IBAction)logNatural:(id)sender;
+- (IBAction)constantE:(id)sender;
+- (IBAction)constantPi:(id)sender;
 
 @end

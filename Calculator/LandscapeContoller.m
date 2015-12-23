@@ -11,9 +11,6 @@
 @implementation LandscapeContoller
 
 -(IBAction)number1:(id)sender{
-    //    selectNumber *= 10;
-    //    selectNumber += 1;
-    //    Screen.text = [NSString stringWithFormat:@"%i", selectNumber];
     if (![Screen.text  isEqual: @"0"]) {
         Screen.text = [Screen.text stringByAppendingString:@"1"];
         selectNumber = [Screen.text floatValue];
@@ -30,14 +27,8 @@
         Screen.text = [NSString stringWithFormat:@"2"];
         selectNumber = [Screen.text floatValue];
     }
-    //    selectNumber *= 10;
-    //    selectNumber += 2;
-    //    Screen.text = [NSString stringWithFormat:@"%i", selectNumber];
 }
 -(IBAction)number3:(id)sender{
-    //    selectNumber *= 10;
-    //    selectNumber += 3;
-    //    Screen.text = [NSString stringWithFormat:@"%i", selectNumber];
     if (![Screen.text  isEqual: @"0"]) {
         Screen.text = [Screen.text stringByAppendingString:@"3"];
         selectNumber = [Screen.text floatValue];
@@ -48,9 +39,6 @@
 }
 
 -(IBAction)number4:(id)sender{
-    //    selectNumber *= 10;
-    //    selectNumber += 4;
-    //    Screen.text = [NSString stringWithFormat:@"%i", selectNumber];
     if (![Screen.text  isEqual: @"0"]) {
         Screen.text = [Screen.text stringByAppendingString:@"4"];
         selectNumber = [Screen.text floatValue];
@@ -60,9 +48,6 @@
     }
 }
 -(IBAction)number5:(id)sender{
-    //    selectNumber *= 10;
-    //    selectNumber += 5;
-    //    Screen.text = [NSString stringWithFormat:@"%i", selectNumber];
     if (![Screen.text  isEqual: @"0"]) {
         Screen.text = [Screen.text stringByAppendingString:@"5"];
         selectNumber = [Screen.text floatValue];
@@ -72,9 +57,6 @@
     }
 }
 -(IBAction)number6:(id)sender{
-    //    selectNumber *= 10;
-    //    selectNumber += 6;
-    //    Screen.text = [NSString stringWithFormat:@"%i", selectNumber];
     if (![Screen.text  isEqual: @"0"]) {
         Screen.text = [Screen.text stringByAppendingString:@"6"];
         selectNumber = [Screen.text floatValue];
@@ -84,9 +66,6 @@
     }
 }
 -(IBAction)number7:(id)sender{
-    //    selectNumber *= 10;
-    //    selectNumber += 7;
-    //    Screen.text = [NSString stringWithFormat:@"%i", selectNumber];
     if (![Screen.text  isEqual: @"0"]) {
         Screen.text = [Screen.text stringByAppendingString:@"7"];
         selectNumber = [Screen.text floatValue];
@@ -96,9 +75,6 @@
     }
 }
 -(IBAction)number8:(id)sender{
-    //    selectNumber *= 10;
-    //    selectNumber += 8;
-    //    Screen.text = [NSString stringWithFormat:@"%i", selectNumber];
     if (![Screen.text  isEqual: @"0"]) {
         Screen.text = [Screen.text stringByAppendingString:@"8"];
         selectNumber = [Screen.text floatValue];
@@ -108,9 +84,6 @@
     }
 }
 -(IBAction)number9:(id)sender{
-    //    selectNumber *= 10;
-    //    selectNumber += 9;
-    //    Screen.text = [NSString stringWithFormat:@"%i", selectNumber];
     if (![Screen.text  isEqual: @"0"]) {
         Screen.text = [Screen.text stringByAppendingString:@"9"];
         selectNumber = [Screen.text floatValue];
@@ -120,9 +93,6 @@
     }
 }
 -(IBAction)number0:(id)sender{
-    //    selectNumber *= 10;
-    //    selectNumber += 0;
-    //    Screen.text = [NSString stringWithFormat:@"%i", selectNumber];
     if (![Screen.text  isEqual: @"0"]) {
         Screen.text = [Screen.text stringByAppendingString:@"0"];
         selectNumber = [Screen.text floatValue];
@@ -130,209 +100,45 @@
 }
 
 -(IBAction)times:(id)sender{
-//    if (selectNumber != 0) {
-//        if (runningTotal == 0 || continueCounting) {
-//            runningTotal = selectNumber;
-//        } else {
-//            [self chooseMethod:method];
-//        }
-//    }
-//    
-//    Screen.text = @"0";
-//    method = 1;
-//    selectNumber = 0;
-//    CurrOperLabel.text = @"Current operation is: \"*\"";
     Screen.text = [Screen.text stringByAppendingString:@"*"];
 }
 -(IBAction)divide:(id)sender{
-//    if (selectNumber != 0) {
-//        if (runningTotal == 0 || continueCounting) {
-//            runningTotal = selectNumber;
-//        } else {
-//            [self chooseMethod:method];
-//        }
-//    }
-//    
-//    Screen.text = @"0";
-//    method = 2;
-//    selectNumber = 0;
-//    CurrOperLabel.text = @"Current operation is: \"/\"";
     Screen.text = [Screen.text stringByAppendingString:@"/"];
 }
 -(IBAction)subtract:(id)sender{
-//    if (selectNumber != 0) {
-//        if (runningTotal == 0 || continueCounting) {
-//            runningTotal = selectNumber;
-//        } else {
-//            [self chooseMethod:method];
-//        }
-//    }
-//    
-//    Screen.text = @"0";
-//    method = 3;
-//    selectNumber = 0;
-//    CurrOperLabel.text = @"Current operation is: \"-\"";
     Screen.text = [Screen.text stringByAppendingString:@"-"];
 }
 -(IBAction)plus:(id)sender{
-//    if (selectNumber != 0) {
-//        if (runningTotal == 0 || continueCounting) {
-//            runningTotal = selectNumber;
-//        } else {
-//            [self chooseMethod:method];
-//        }
-//    }
-//    
-//    Screen.text = @"0";
-//    method = 4;
-//    selectNumber = 0;
-//    CurrOperLabel.text = @"Current operation is: \"+\"";
     Screen.text = [Screen.text stringByAppendingString:@"+"];
 }
 -(IBAction)equals:(id)sender{
-//    if (selectNumber != 0) {
-//        if (runningTotal == 0) {
-//            runningTotal = selectNumber;
-//        } else {
-//            [self chooseMethod:method];
-//        }
-//    }
-//    
-//    method = 0;
-//    selectNumber = 0;
-//    Screen.text = [NSString stringWithFormat:@"%g", runningTotal];
-//    CurrOperLabel.text = @"";
-//    continueCounting = YES;
-//    NSString *resultedString = [self findMatchedStringByPattern:@"[(]{1}[1234567890.\\+\\-\\*\\/\\%]+[)]{1}" andString:Screen.text];
-//    
-//    // Look for "*"
-////    BOOL find = false;
-//    do {
-//        float total;
-////        find = false;
-//        
-//        NSString *resultedOperationString = [self findMatchedStringByPattern:@"[1234567890.]+[\\*]{1}[1234567890.]+" andString:resultedString];
-//        NSString *savedResultedOperationString = [resultedOperationString copy];
-//        
-//        if (resultedOperationString == nil) break;
-//        
-//        NSString *resultedNumberString = [self findMatchedStringByPattern:@"[1234567890.]+" andString:resultedOperationString];
-//        resultedOperationString = [resultedOperationString stringByReplacingOccurrencesOfString:resultedNumberString withString:@""];
-//        float firstNumber = [resultedNumberString floatValue];
-//        
-//        resultedNumberString = [self findMatchedStringByPattern:@"[1234567890.]+" andString:resultedOperationString];
-//        resultedOperationString = [resultedOperationString stringByReplacingOccurrencesOfString:resultedNumberString withString:@""];
-//        float secondNumber = [resultedNumberString floatValue];
-//        
-//        total = firstNumber * secondNumber;
-//        
-//        Screen.text = [Screen.text stringByReplacingOccurrencesOfString:savedResultedOperationString withString:[NSString stringWithFormat:@"%g", total]];
-//        resultedString = [resultedString stringByReplacingOccurrencesOfString:savedResultedOperationString withString:[NSString stringWithFormat:@"%g", total]];
-//        
-//    } while (YES);
-//    
-//    resultedString = [self findMatchedStringByPattern:@"[(]{1}[1234567890.\\+\\-\\*\\/\\%]+[)]{1}" andString:Screen.text];
-//    
-//    
-//    
-//    // Look for "/"
-//    //    BOOL find = false;
-//    do {
-//        float total;
-//        //        find = false;
-//        
-//        NSString *resultedOperationString = [self findMatchedStringByPattern:@"[1234567890.]+[\\/]{1}[1234567890.]+" andString:resultedString];
-//        NSString *savedResultedOperationString = [resultedOperationString copy];
-//        
-//        if (resultedOperationString == nil) break;
-//        
-//        NSString *resultedNumberString = [self findMatchedStringByPattern:@"[1234567890.]+" andString:resultedOperationString];
-//        resultedOperationString = [resultedOperationString stringByReplacingOccurrencesOfString:resultedNumberString withString:@""];
-//        float firstNumber = [resultedNumberString floatValue];
-//        
-//        resultedNumberString = [self findMatchedStringByPattern:@"[1234567890.]+" andString:resultedOperationString];
-//        resultedOperationString = [resultedOperationString stringByReplacingOccurrencesOfString:resultedNumberString withString:@""];
-//        float secondNumber = [resultedNumberString floatValue];
-//        
-//        total = firstNumber / secondNumber;
-//        
-//        Screen.text = [Screen.text stringByReplacingOccurrencesOfString:savedResultedOperationString withString:[NSString stringWithFormat:@"%g", total]];
-//        resultedString = [resultedString stringByReplacingOccurrencesOfString:savedResultedOperationString withString:[NSString stringWithFormat:@"%g", total]];
-//        
-//    } while (YES);
-//    
-//    resultedString = [self findMatchedStringByPattern:@"[(]{1}[1234567890.\\+\\-\\*\\/\\%]+[)]{1}" andString:Screen.text];
-//    
-//    // Look for "+"
-//    //    BOOL find = false;
-//    do {
-//        float total;
-//        //        find = false;
-//        
-//        NSString *resultedOperationString = [self findMatchedStringByPattern:@"[1234567890.]+[\\+]{1}[1234567890.]+" andString:resultedString];
-//        NSString *savedResultedOperationString = [resultedOperationString copy];
-//        
-//        if (resultedOperationString == nil) break;
-//        
-//        NSString *resultedNumberString = [self findMatchedStringByPattern:@"[1234567890.]+" andString:resultedOperationString];
-//        resultedOperationString = [resultedOperationString stringByReplacingOccurrencesOfString:resultedNumberString withString:@""];
-//        float firstNumber = [resultedNumberString floatValue];
-//        
-//        resultedNumberString = [self findMatchedStringByPattern:@"[1234567890.]+" andString:resultedOperationString];
-//        resultedOperationString = [resultedOperationString stringByReplacingOccurrencesOfString:resultedNumberString withString:@""];
-//        float secondNumber = [resultedNumberString floatValue];
-//        
-//        total = firstNumber + secondNumber;
-//        
-//        Screen.text = [Screen.text stringByReplacingOccurrencesOfString:savedResultedOperationString withString:[NSString stringWithFormat:@"%g", total]];
-//        resultedString = [resultedString stringByReplacingOccurrencesOfString:savedResultedOperationString withString:[NSString stringWithFormat:@"%g", total]];
-//        
-//    } while (YES);
-//    
-//    resultedString = [self findMatchedStringByPattern:@"[(]{1}[1234567890.\\+\\-\\*\\/\\%]+[)]{1}" andString:Screen.text];
-//    
-//    // Look for "-"
-//    //    BOOL find = false;
-//    do {
-//        float total;
-//        //        find = false;
-//        
-//        NSString *resultedOperationString = [self findMatchedStringByPattern:@"[1234567890.]+[\\-]{1}[1234567890.]+" andString:resultedString];
-//        NSString *savedResultedOperationString = [resultedOperationString copy];
-//        
-//        if (resultedOperationString == nil) break;
-//        
-//        NSString *resultedNumberString = [self findMatchedStringByPattern:@"[1234567890.]+" andString:resultedOperationString];
-//        resultedOperationString = [resultedOperationString stringByReplacingOccurrencesOfString:resultedNumberString withString:@""];
-//        float firstNumber = [resultedNumberString floatValue];
-//        
-//        resultedNumberString = [self findMatchedStringByPattern:@"[1234567890.]+" andString:resultedOperationString];
-//        resultedOperationString = [resultedOperationString stringByReplacingOccurrencesOfString:resultedNumberString withString:@""];
-//        float secondNumber = [resultedNumberString floatValue];
-//        
-//        total = firstNumber - secondNumber;
-//        
-//        Screen.text = [Screen.text stringByReplacingOccurrencesOfString:savedResultedOperationString withString:[NSString stringWithFormat:@"%g", total]];
-//        resultedString = [resultedString stringByReplacingOccurrencesOfString:savedResultedOperationString withString:[NSString stringWithFormat:@"%g", total]];
-//        
-//    } while (YES);
+    do {
     
-//    NSRange range = [string rangeOfString:searchKeyword];
-//    if (range.location == NSNotFound) {
-//        NSLog(@"string was not found");
-//    } else {
-//        NSLog(@"position %lu", (unsigned long)range.location);
-//    }
+        [self replaceConstants];
     
-//    NSString *resultedString = [self findMatchedStringByPattern:@"[(]{1}[1234567890.\\+\\-\\*\\/\\%]+[)]{1}" andString:Screen.text];
-    
+        NSString *occurrencesOfNeagtiveString = [self findMatchedStringByPattern:@"[(]{1}[\\-]{1}[m1234567890.]+[)]{1}" andString:Screen.text];
+        if (occurrencesOfNeagtiveString != nil) {
+            NSString *occurrencesOfNeagtiveNumString = [self findMatchedStringByPattern:@"[1234567890.]+" andString:occurrencesOfNeagtiveString];
+            Screen.text = [Screen.text stringByReplacingOccurrencesOfString:occurrencesOfNeagtiveString withString:[NSString stringWithFormat:@"(m%@)", occurrencesOfNeagtiveNumString]];
+        }
+        
+    do {
+        NSString *resultedString = [self findMatchedStringByPattern:@"[m1234567890.]+[\\^]{1}[m1234567890.]+" andString:Screen.text];
+        if (resultedString == nil) break;
+        
+        [self executeOperation:POWER_OPERATION withResultedString:Screen.text];
+    } while (true);
+        
+    // Evaluate multiplication and division operations
     do {
         NSString *resultedString = [self findMatchedStringByPattern:@"[(]{1}[m1234567890.\\+\\-\\*\\/\\%]+[)]{1}" andString:Screen.text];
+        
+        if (resultedString == nil) break;
         
         NSRange rangeMultiply = [resultedString rangeOfString:@"*"];
         NSRange rangeDivision = [resultedString rangeOfString:@"/"];
     
-    if (rangeMultiply.location == NSNotFound && rangeDivision.location == NSNotFound) break;
+        if (rangeMultiply.location == NSNotFound && rangeDivision.location == NSNotFound) break;
     
         if (rangeMultiply.location != NSNotFound && rangeMultiply.location < rangeDivision.location) {
             [self executeOperation:MULTIPLY_OPERATION withResultedString:resultedString];
@@ -341,10 +147,13 @@
         }
     } while  (YES);
     
+    // Evaluate plus and minus operations
     do {
         NSRange rangeMinus;
         NSRange rangePlus;
         NSString *resultedString = [self findMatchedStringByPattern:@"([(]{1}[m1234567890.\\+\\-\\*\\/\\%]+[)]{1})" andString:Screen.text];
+        
+        if (resultedString == nil) break;
         
         NSString *checkOperationString = [self findMatchedStringByPattern:@"[m1234567890.]+[\\-]{1}[m1234567890.]+" andString:resultedString];
         if (checkOperationString != nil) {
@@ -354,7 +163,6 @@
         if (checkOperationString != nil) {
             rangePlus = [resultedString rangeOfString:@"+"];
         } else rangePlus.location = NSNotFound;
-//        NSRange rangePlus = [resultedString rangeOfString:@"+"];
         
         if (rangeMinus.location == NSNotFound && rangePlus.location == NSNotFound) break;
         
@@ -365,9 +173,28 @@
         }
     } while (YES);
     
-    Screen.text = [Screen.text stringByReplacingOccurrencesOfString:@"(" withString:@""];
-    Screen.text = [Screen.text stringByReplacingOccurrencesOfString:@")" withString:@""];
+    [self evaluateTrigonometricFunctions];
+        
+    NSString *resultedParenthesisJustNumberString = [self findMatchedStringByPattern:@"[(]{1}[m1234567890.]+[)]{1}" andString:Screen.text];
+        if (resultedParenthesisJustNumberString != nil) {
+            NSString *resultedParenthesisJustNumber = [self findMatchedStringByPattern:@"[m1234567890.]+" andString:resultedParenthesisJustNumberString];
+            Screen.text = [Screen.text stringByReplacingOccurrencesOfString:resultedParenthesisJustNumberString withString:resultedParenthesisJustNumber];
+        }
+     [self evaluateTrigonometricFunctions];
+        
+     NSString *totalCheck = [self findMatchedStringByPattern:@"[^()]+" andString:Screen.text];
+     if ([totalCheck isEqualToString:Screen.text]) break;
+    } while (YES);
     
+    // Evaluate power
+    do {
+        NSString *resultedString = [self findMatchedStringByPattern:@"[m1234567890.]+[\\^]{1}[m1234567890.]+" andString:Screen.text];
+        if (resultedString == nil) break;
+        
+        [self executeOperation:POWER_OPERATION withResultedString:Screen.text];
+    } while (true);
+    
+    // Evaluate multiplication and division operations (no parenthesis)
     do {
         NSRange rangeMultiply = [Screen.text rangeOfString:@"*"];
         NSRange rangeDivision = [Screen.text rangeOfString:@"/"];
@@ -384,7 +211,6 @@
     do {
         NSRange rangeMinus;
         NSRange rangePlus;
-//        NSString *resultedString = [self findMatchedStringByPattern:@"([(]{1}[m1234567890.\\+\\-\\*\\/\\%]+[)]{1})" andString:Screen.text];
         
         NSString *checkOperationString = [self findMatchedStringByPattern:@"[m1234567890.]+[\\-]{1}[m1234567890.]+" andString:Screen.text];
         if (checkOperationString != nil) {
@@ -394,7 +220,6 @@
         if (checkOperationString != nil) {
             rangePlus = [Screen.text rangeOfString:@"+"];
         } else rangePlus.location = NSNotFound;
-        //        NSRange rangePlus = [resultedString rangeOfString:@"+"];
         
         if (rangeMinus.location == NSNotFound && rangePlus.location == NSNotFound) break;
         
@@ -411,10 +236,8 @@
 
 // Evaluate one operation
 -(void)executeOperation:(int)operation withResultedString:(NSString *)resultedString {
-//    NSString *resultedString = [self findMatchedStringByPattern:@"[(]{1}[m1234567890.\\+\\-\\*\\/\\%]+[)]{1}" andString:Screen.text];
     NSString *resultedOperationString = [[NSString alloc] init];
 
-//    do {
         float total;
         switch (operation) {
             case MULTIPLY_OPERATION:
@@ -432,12 +255,14 @@
             case PERSENT_OPERATION:
                 resultedOperationString = [self findMatchedStringByPattern:@"[m1234567890.]+[\\%]{1}[m1234567890.]+" andString:resultedString];
                 break;
+            case POWER_OPERATION:
+                resultedOperationString = [self findMatchedStringByPattern:@"[m1234567890.]+[\\^]{1}[m1234567890.]+" andString:resultedString];
+                break;
             default:
                 break;
         }
         NSString *savedResultedOperationString = [resultedOperationString copy];
         
-//        if (resultedOperationString == nil) break;
     float firstNumber, secondNumber;
         NSString *resultedNumberString = [self findMatchedStringByPattern:@"([m]{1}[1234567890.]+)|([1234567890.]+)" andString:resultedOperationString];
     if ([resultedNumberString containsString:@"m"]) {
@@ -459,10 +284,6 @@
         secondNumber = [resultedNumberString floatValue];
     }
     
-//        resultedNumberString = [self findMatchedStringByPattern:@"[1234567890.]+" andString:resultedOperationString];
-//        resultedOperationString = [resultedOperationString stringByReplacingOccurrencesOfString:resultedNumberString withString:@""];
-//        secondNumber = [resultedNumberString floatValue];
-    
         switch (operation) {
             case MULTIPLY_OPERATION:
                 total = firstNumber * secondNumber;
@@ -479,6 +300,8 @@
             case PERSENT_OPERATION:
                 total = (firstNumber * secondNumber) / 100;
                 break;
+            case POWER_OPERATION:
+                total = powf(firstNumber, secondNumber);
             default:
                 break;
         }
@@ -486,9 +309,6 @@
             Screen.text = [Screen.text stringByReplacingOccurrencesOfString:savedResultedOperationString withString:[NSString stringWithFormat:@"m%g", -total] options:NSLiteralSearch range:[Screen.text rangeOfString:savedResultedOperationString]];
         else
             Screen.text = [Screen.text stringByReplacingOccurrencesOfString:savedResultedOperationString withString:[NSString stringWithFormat:@"%g", total] options:NSLiteralSearch range:[Screen.text rangeOfString:savedResultedOperationString]];
-//        resultedString = [resultedString stringByReplacingOccurrencesOfString:savedResultedOperationString withString:[NSString stringWithFormat:@"%g", total]];
-    
-//    } while (YES);
 }
 
 -(NSString *)findMatchedStringByPattern:(NSString *)inputPattern andString:(NSString *)inputString {
@@ -508,6 +328,219 @@
     return matchText;
 }
 
+-(void)evaluateTrigonometricFunctions {
+    do {
+        NSString *resultedString = [self findMatchedStringByPattern:@"ln[(]{1}[1234567890.m]+[)]{1}" andString:Screen.text];
+        if (resultedString == nil) break;
+        
+        NSString *resultedNumString = [self findMatchedStringByPattern:@"[1234567890.m]+" andString:resultedString];
+        float resultedNumber;
+        
+        if ([resultedNumString containsString:@"m"]) {
+            [resultedNumString stringByReplacingOccurrencesOfString:@"m" withString:@""];
+            resultedNumber = -[resultedNumString floatValue];
+        } else {
+            resultedNumber = [resultedNumString floatValue];
+        }
+        
+        float result = logf(resultedNumber);
+        if (result < 0) {
+            Screen.text = [Screen.text stringByReplacingOccurrencesOfString:resultedString withString:[NSString stringWithFormat:@"m%g", -result]];
+        } else {
+            Screen.text = [Screen.text stringByReplacingOccurrencesOfString:resultedString withString:[NSString stringWithFormat:@"%g", result]];
+        }
+    } while (YES);
+    
+    // Cos evaluation
+    do {
+        NSString *resultedString = [self findMatchedStringByPattern:@"cos[(]{1}[1234567890.m]+[)]{1}" andString:Screen.text];
+        if (resultedString == nil) break;
+        
+        NSString *resultedNumString = [self findMatchedStringByPattern:@"[1234567890.m]+" andString:resultedString];
+        float resultedNumber;
+        
+        if ([resultedNumString containsString:@"m"]) {
+            [resultedNumString stringByReplacingOccurrencesOfString:@"m" withString:@""];
+            resultedNumber = -[resultedNumString floatValue];
+        } else {
+            resultedNumber = [resultedNumString floatValue];
+        }
+        
+        float result = cosf(resultedNumber);
+        if (result < 0) {
+            Screen.text = [Screen.text stringByReplacingOccurrencesOfString:resultedString withString:[NSString stringWithFormat:@"m%g", -result]];
+        } else {
+            Screen.text = [Screen.text stringByReplacingOccurrencesOfString:resultedString withString:[NSString stringWithFormat:@"%g", result]];
+        }
+    } while (YES);
+    
+    // Sin evaluation
+    do {
+        NSString *resultedString = [self findMatchedStringByPattern:@"sin[(]{1}[1234567890.m]+[)]{1}" andString:Screen.text];
+        if (resultedString == nil) break;
+        
+        NSString *resultedNumString = [self findMatchedStringByPattern:@"[1234567890.m]+" andString:resultedString];
+        float resultedNumber;
+        
+        if ([resultedNumString containsString:@"m"]) {
+            [resultedNumString stringByReplacingOccurrencesOfString:@"m" withString:@""];
+            resultedNumber = -[resultedNumString floatValue];
+        } else {
+            resultedNumber = [resultedNumString floatValue];
+        }
+        
+        float result = sinf(resultedNumber);
+        if (result < 0) {
+            Screen.text = [Screen.text stringByReplacingOccurrencesOfString:resultedString withString:[NSString stringWithFormat:@"m%g", -result]];
+        } else {
+            Screen.text = [Screen.text stringByReplacingOccurrencesOfString:resultedString withString:[NSString stringWithFormat:@"%g", result]];
+        }
+    } while (YES);
+    
+    // Ctan evaluation
+    do {
+        NSString *resultedString = [self findMatchedStringByPattern:@"ctan[(]{1}[1234567890.m]+[)]{1}" andString:Screen.text];
+        if (resultedString == nil) break;
+        
+        NSString *resultedNumString = [self findMatchedStringByPattern:@"[1234567890.m]+" andString:resultedString];
+        float resultedNumber;
+        
+        if ([resultedNumString containsString:@"m"]) {
+            [resultedNumString stringByReplacingOccurrencesOfString:@"m" withString:@""];
+            resultedNumber = -[resultedNumString floatValue];
+        } else {
+            resultedNumber = [resultedNumString floatValue];
+        }
+        
+        float result = 1 / tanf(resultedNumber);
+        if (result < 0) {
+            Screen.text = [Screen.text stringByReplacingOccurrencesOfString:resultedString withString:[NSString stringWithFormat:@"m%g", -result]];
+        } else {
+            Screen.text = [Screen.text stringByReplacingOccurrencesOfString:resultedString withString:[NSString stringWithFormat:@"%g", result]];
+        }
+    } while (YES);
+    
+    // Tan evaluation
+    do {
+        NSString *resultedString = [self findMatchedStringByPattern:@"tan[(]{1}[1234567890.m]+[)]{1}" andString:Screen.text];
+        if (resultedString == nil) break;
+        
+        NSString *resultedNumString = [self findMatchedStringByPattern:@"[1234567890.m]+" andString:resultedString];
+        float resultedNumber;
+        
+        if ([resultedNumString containsString:@"m"]) {
+            [resultedNumString stringByReplacingOccurrencesOfString:@"m" withString:@""];
+            resultedNumber = -[resultedNumString floatValue];
+        } else {
+            resultedNumber = [resultedNumString floatValue];
+        }
+        
+        float result = tanf(resultedNumber);
+        if (result < 0) {
+            Screen.text = [Screen.text stringByReplacingOccurrencesOfString:resultedString withString:[NSString stringWithFormat:@"m%g", -result]];
+        } else {
+            Screen.text = [Screen.text stringByReplacingOccurrencesOfString:resultedString withString:[NSString stringWithFormat:@"%g", result]];
+        }
+    } while (YES);
+    
+    // Cosh evaluation
+    do {
+        NSString *resultedString = [self findMatchedStringByPattern:@"cosh[(]{1}[1234567890.m]+[)]{1}" andString:Screen.text];
+        if (resultedString == nil) break;
+        
+        NSString *resultedNumString = [self findMatchedStringByPattern:@"[1234567890.m]+" andString:resultedString];
+        float resultedNumber;
+        
+        if ([resultedNumString containsString:@"m"]) {
+            [resultedNumString stringByReplacingOccurrencesOfString:@"m" withString:@""];
+            resultedNumber = -[resultedNumString floatValue];
+        } else {
+            resultedNumber = [resultedNumString floatValue];
+        }
+        
+        float result = coshf(resultedNumber);
+        if (result < 0) {
+            Screen.text = [Screen.text stringByReplacingOccurrencesOfString:resultedString withString:[NSString stringWithFormat:@"m%g", -result]];
+        } else {
+            Screen.text = [Screen.text stringByReplacingOccurrencesOfString:resultedString withString:[NSString stringWithFormat:@"%g", result]];
+        }
+    } while (YES);
+    
+    // Sinh evaluation
+    do {
+        NSString *resultedString = [self findMatchedStringByPattern:@"sinh[(]{1}[1234567890.m]+[)]{1}" andString:Screen.text];
+        if (resultedString == nil) break;
+        
+        NSString *resultedNumString = [self findMatchedStringByPattern:@"[1234567890.m]+" andString:resultedString];
+        float resultedNumber;
+        
+        if ([resultedNumString containsString:@"m"]) {
+            [resultedNumString stringByReplacingOccurrencesOfString:@"m" withString:@""];
+            resultedNumber = -[resultedNumString floatValue];
+        } else {
+            resultedNumber = [resultedNumString floatValue];
+        }
+        
+        float result = sinhf(resultedNumber);
+        if (result < 0) {
+            Screen.text = [Screen.text stringByReplacingOccurrencesOfString:resultedString withString:[NSString stringWithFormat:@"m%g", -result]];
+        } else {
+            Screen.text = [Screen.text stringByReplacingOccurrencesOfString:resultedString withString:[NSString stringWithFormat:@"%g", result]];
+        }
+    } while (YES);
+    
+    // Ctanh evaluation
+    do {
+        NSString *resultedString = [self findMatchedStringByPattern:@"ctanh[(]{1}[1234567890.m]+[)]{1}" andString:Screen.text];
+        if (resultedString == nil) break;
+        
+        NSString *resultedNumString = [self findMatchedStringByPattern:@"[1234567890.m]+" andString:resultedString];
+        float resultedNumber;
+        
+        if ([resultedNumString containsString:@"m"]) {
+            [resultedNumString stringByReplacingOccurrencesOfString:@"m" withString:@""];
+            resultedNumber = -[resultedNumString floatValue];
+        } else {
+            resultedNumber = [resultedNumString floatValue];
+        }
+        
+        float result = 1 / tanhf(resultedNumber);
+        if (result < 0) {
+            Screen.text = [Screen.text stringByReplacingOccurrencesOfString:resultedString withString:[NSString stringWithFormat:@"m%g", -result]];
+        } else {
+            Screen.text = [Screen.text stringByReplacingOccurrencesOfString:resultedString withString:[NSString stringWithFormat:@"%g", result]];
+        }
+    } while (YES);
+    
+    // Tanh evaluation
+    do {
+        NSString *resultedString = [self findMatchedStringByPattern:@"tanh[(]{1}[1234567890.m]+[)]{1}" andString:Screen.text];
+        if (resultedString == nil) break;
+        
+        NSString *resultedNumString = [self findMatchedStringByPattern:@"[1234567890.m]+" andString:resultedString];
+        float resultedNumber;
+        
+        if ([resultedNumString containsString:@"m"]) {
+            [resultedNumString stringByReplacingOccurrencesOfString:@"m" withString:@""];
+            resultedNumber = -[resultedNumString floatValue];
+        } else {
+            resultedNumber = [resultedNumString floatValue];
+        }
+        
+        float result = tanhf(resultedNumber);
+        if (result < 0) {
+            Screen.text = [Screen.text stringByReplacingOccurrencesOfString:resultedString withString:[NSString stringWithFormat:@"m%g", -result]];
+        } else {
+            Screen.text = [Screen.text stringByReplacingOccurrencesOfString:resultedString withString:[NSString stringWithFormat:@"%g", result]];
+        }
+    } while (YES);
+}
+
+-(void)replaceConstants {
+    Screen.text = [Screen.text stringByReplacingOccurrencesOfString:@"E" withString:[NSString stringWithFormat:@"%g", M_E]];
+    Screen.text = [Screen.text stringByReplacingOccurrencesOfString:@"PI" withString:[NSString stringWithFormat:@"%g", M_PI]];
+}
+
 -(IBAction)allClear:(id)sender{
     
     method = 0;
@@ -515,7 +548,7 @@
     runningTotal = 0;
     continueCounting = NO;
     
-    Screen.text = [NSString stringWithFormat:@"0"];
+    Screen.text = [NSString stringWithFormat:@""];
 }
 
 - (IBAction)changeToPosNeg:(id)sender {
@@ -531,18 +564,6 @@
 }
 
 - (IBAction)calcPercent:(id)sender {
-//    if (selectNumber != 0) {
-//        if (runningTotal == 0 || continueCounting) {
-//            runningTotal = selectNumber;
-//        } else {
-//            [self chooseMethod:method];
-//        }
-//    }
-//    
-//    Screen.text = @"0";
-//    method = 5;
-//    selectNumber = 0;
-//    CurrOperLabel.text = @"Current operation is: \"%\"";
     Screen.text = [Screen.text stringByAppendingString:@"%"];
 }
 
@@ -579,34 +600,75 @@
 }
 
 - (IBAction)leftParenthesis:(id)sender {
-//    if ([Screen.text characterAtIndex:[Screen.text length] - 1 ] == '+' ||
-//        [Screen.text characterAtIndex:[Screen.text length] - 1 ] == '-' ||
-//        [Screen.text characterAtIndex:[Screen.text length] - 1 ] == '/' ||
-//        [Screen.text characterAtIndex:[Screen.text length] - 1 ] == '*' ||
-//        [Screen.text characterAtIndex:[Screen.text length] - 1 ] == '%') {
-//        Screen.text = [Screen.text stringByAppendingString:@"("];
-//        selectNumber = [Screen.text floatValue];
-//    } else if ([Screen.text isEqualToString:@"0"]){
         Screen.text = [Screen.text stringByAppendingString:@"("];
         selectNumber = [Screen.text floatValue];
-//    }
 }
 
 - (IBAction)rightParenthesis:(id)sender {
-//    if ([Screen.text characterAtIndex:[Screen.text length] - 1 ] == '1' ||
-//        [Screen.text characterAtIndex:[Screen.text length] - 1 ] == '2' ||
-//        [Screen.text characterAtIndex:[Screen.text length] - 1 ] == '3' ||
-//        [Screen.text characterAtIndex:[Screen.text length] - 1 ] == '4' ||
-//        [Screen.text characterAtIndex:[Screen.text length] - 1 ] == '5' ||
-//        [Screen.text characterAtIndex:[Screen.text length] - 1 ] == '6' ||
-//        [Screen.text characterAtIndex:[Screen.text length] - 1 ] == '7' ||
-//        [Screen.text characterAtIndex:[Screen.text length] - 1 ] == '8' ||
-//        [Screen.text characterAtIndex:[Screen.text length] - 1 ] == '9' ||
-//        ([Screen.text characterAtIndex:[Screen.text length] - 1 ] == '0' &&
-//        [Screen.text containsString:@"("])) {
         Screen.text = [Screen.text stringByAppendingString:@")"];
         selectNumber = [Screen.text floatValue];
-//    }
+}
+
+- (IBAction)sinxFunction:(id)sender {
+    if ([Screen.text  isEqual: @"0"])
+        Screen.text = [NSString stringWithFormat:@"sin("];
+    else
+        Screen.text = [Screen.text stringByAppendingString:@"sin("];
+}
+
+- (IBAction)cosxFunction:(id)sender {
+    if ([Screen.text  isEqual: @"0"])
+        Screen.text = [NSString stringWithFormat:@"cos("];
+    else
+        Screen.text = [Screen.text stringByAppendingString:@"cos("];}
+
+- (IBAction)tanxFunction:(id)sender {
+    if ([Screen.text  isEqual: @"0"])
+        Screen.text = [NSString stringWithFormat:@"tan("];
+    else
+        Screen.text = [Screen.text stringByAppendingString:@"tan("];
+}
+
+- (IBAction)ctanxFunction:(id)sender {
+    if ([Screen.text  isEqual: @"0"])
+        Screen.text = [NSString stringWithFormat:@"ctan("];
+    else
+        Screen.text = [Screen.text stringByAppendingString:@"ctan("];}
+
+- (IBAction)clear:(id)sender {
+    Screen.text = [Screen.text substringWithRange:NSMakeRange(0, [Screen.text length] - 1)];
+}
+
+- (IBAction)sinhFunction:(id)sender {
+    Screen.text = [Screen.text stringByAppendingString:@"sinh("];
+}
+
+- (IBAction)coshFunction:(id)sender {
+    Screen.text = [Screen.text stringByAppendingString:@"cosh("];
+}
+
+- (IBAction)tanhFunction:(id)sender {
+    Screen.text = [Screen.text stringByAppendingString:@"tanh("];
+}
+
+- (IBAction)ctanhFunction:(id)sender {
+    Screen.text = [Screen.text stringByAppendingString:@"ctanh("];
+}
+
+- (IBAction)power:(id)sender {
+    Screen.text = [Screen.text stringByAppendingString:@"^("];
+}
+
+- (IBAction)logNatural:(id)sender {
+    Screen.text = [Screen.text stringByAppendingString:@"ln("];
+}
+
+- (IBAction)constantE:(id)sender {
+    Screen.text = [Screen.text stringByAppendingString:@"E"];
+}
+
+- (IBAction)constantPi:(id)sender {
+    Screen.text = [Screen.text stringByAppendingString:@"PI"];
 }
 
 @end
