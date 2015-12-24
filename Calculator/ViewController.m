@@ -15,9 +15,6 @@
 @implementation ViewController
 
 -(IBAction)number1:(id)sender{
-//    selectNumber *= 10;
-//    selectNumber += 1;
-//    Screen.text = [NSString stringWithFormat:@"%i", selectNumber];
     if (![Screen.text  isEqual: @"0"]) {
         Screen.text = [Screen.text stringByAppendingString:@"1"];
         selectNumber = [Screen.text floatValue];
@@ -34,14 +31,8 @@
         Screen.text = [NSString stringWithFormat:@"2"];
         selectNumber = [Screen.text floatValue];
     }
-//    selectNumber *= 10;
-//    selectNumber += 2;
-//    Screen.text = [NSString stringWithFormat:@"%i", selectNumber];
 }
 -(IBAction)number3:(id)sender{
-//    selectNumber *= 10;
-//    selectNumber += 3;
-//    Screen.text = [NSString stringWithFormat:@"%i", selectNumber];
     if (![Screen.text  isEqual: @"0"]) {
         Screen.text = [Screen.text stringByAppendingString:@"3"];
         selectNumber = [Screen.text floatValue];
@@ -52,9 +43,6 @@
 }
 
 -(IBAction)number4:(id)sender{
-//    selectNumber *= 10;
-//    selectNumber += 4;
-//    Screen.text = [NSString stringWithFormat:@"%i", selectNumber];
     if (![Screen.text  isEqual: @"0"]) {
         Screen.text = [Screen.text stringByAppendingString:@"4"];
         selectNumber = [Screen.text floatValue];
@@ -64,9 +52,6 @@
     }
 }
 -(IBAction)number5:(id)sender{
-//    selectNumber *= 10;
-//    selectNumber += 5;
-//    Screen.text = [NSString stringWithFormat:@"%i", selectNumber];
     if (![Screen.text  isEqual: @"0"]) {
         Screen.text = [Screen.text stringByAppendingString:@"5"];
         selectNumber = [Screen.text floatValue];
@@ -76,9 +61,6 @@
     }
 }
 -(IBAction)number6:(id)sender{
-//    selectNumber *= 10;
-//    selectNumber += 6;
-//    Screen.text = [NSString stringWithFormat:@"%i", selectNumber];
     if (![Screen.text  isEqual: @"0"]) {
         Screen.text = [Screen.text stringByAppendingString:@"6"];
         selectNumber = [Screen.text floatValue];
@@ -88,9 +70,6 @@
     }
 }
 -(IBAction)number7:(id)sender{
-//    selectNumber *= 10;
-//    selectNumber += 7;
-//    Screen.text = [NSString stringWithFormat:@"%i", selectNumber];
     if (![Screen.text  isEqual: @"0"]) {
         Screen.text = [Screen.text stringByAppendingString:@"7"];
         selectNumber = [Screen.text floatValue];
@@ -100,9 +79,6 @@
     }
 }
 -(IBAction)number8:(id)sender{
-//    selectNumber *= 10;
-//    selectNumber += 8;
-//    Screen.text = [NSString stringWithFormat:@"%i", selectNumber];
     if (![Screen.text  isEqual: @"0"]) {
         Screen.text = [Screen.text stringByAppendingString:@"8"];
         selectNumber = [Screen.text floatValue];
@@ -112,9 +88,6 @@
     }
 }
 -(IBAction)number9:(id)sender{
-//    selectNumber *= 10;
-//    selectNumber += 9;
-//    Screen.text = [NSString stringWithFormat:@"%i", selectNumber];
     if (![Screen.text  isEqual: @"0"]) {
         Screen.text = [Screen.text stringByAppendingString:@"9"];
         selectNumber = [Screen.text floatValue];
@@ -124,9 +97,6 @@
     }
 }
 -(IBAction)number0:(id)sender{
-//    selectNumber *= 10;
-//    selectNumber += 0;
-//    Screen.text = [NSString stringWithFormat:@"%i", selectNumber];
     if (![Screen.text  isEqual: @"0"]) {
         Screen.text = [Screen.text stringByAppendingString:@"0"];
         selectNumber = [Screen.text floatValue];

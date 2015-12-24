@@ -34,7 +34,6 @@
 -(IBAction)allClear:(id)sender;
 - (IBAction)changeToPosNeg:(id)sender;
 - (IBAction)calcPercent:(id)sender;
-//- (void)chooseMethod:(int)method;
 - (IBAction)addDot:(id)sender;
 
 @end
