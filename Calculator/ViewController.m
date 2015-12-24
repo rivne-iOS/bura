@@ -116,6 +116,7 @@
     method = 1;
     selectNumber = 0;
     CurrOperLabel.text = @"Current operation is: \"*\"";
+    selectNumber = runningTotal;
 }
 -(IBAction)divide:(id)sender{
     if (selectNumber != 0) {
@@ -130,6 +131,7 @@
     method = 2;
     selectNumber = 0;
     CurrOperLabel.text = @"Current operation is: \"/\"";
+    selectNumber = runningTotal;
 }
 -(IBAction)subtract:(id)sender{
     if (selectNumber != 0) {
@@ -144,6 +146,7 @@
     method = 3;
     selectNumber = 0;
     CurrOperLabel.text = @"Current operation is: \"-\"";
+    selectNumber = runningTotal;
 }
 -(IBAction)plus:(id)sender{
     if (selectNumber != 0) {
@@ -158,7 +161,7 @@
     method = 4;
     selectNumber = 0;
     CurrOperLabel.text = @"Current operation is: \"+\"";
-    
+    selectNumber = runningTotal;
 }
 -(IBAction)equals:(id)sender{
     if (selectNumber != 0) {
@@ -174,7 +177,7 @@
     Screen.text = [NSString stringWithFormat:@"%g", runningTotal];
     CurrOperLabel.text = @"";
     continueCounting = YES;
-    
+    selectNumber = runningTotal;
 }
 -(IBAction)allClear:(id)sender{
     
@@ -188,13 +191,13 @@
 
 - (IBAction)changeToPosNeg:(id)sender {
     if (![Screen.text isEqualToString:@"0"]) {
-        if (method != 0) {
+//        if (continueCounting == NO) {
             selectNumber = -selectNumber;
             Screen.text = [NSString stringWithFormat:@"%g", selectNumber];
-        } else {
-            runningTotal = -runningTotal;
-            Screen.text = [NSString stringWithFormat:@"%g", runningTotal];
-        }
+//        } else {
+//            runningTotal = -runningTotal;
+//            Screen.text = [NSString stringWithFormat:@"%g", runningTotal];
+//        }
     }
 }
 
