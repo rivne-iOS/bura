@@ -685,15 +685,6 @@
                                     <action selector="rightParenthesis:" destination="hpl-lf-mQU" eventType="touchUpInside" id="Kwu-wL-knt"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DVt-n2-hih">
-                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="italicSystem" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="heightClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="23" y="291" width="522" height="21"/>
-                                </variation>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0IX-Qo-OEs">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
@@ -845,6 +836,15 @@
                                     <action selector="constantE:" destination="hpl-lf-mQU" eventType="touchUpInside" id="EUW-sz-e6q"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DVt-n2-hih">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="italicSystem" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="20" y="279" width="528" height="21"/>
+                                </variation>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <variation key="default">
@@ -869,7 +869,6 @@
                                 <exclude reference="LRE-Db-1Pa"/>
                                 <exclude reference="ngM-2V-6mY"/>
                                 <exclude reference="Zvx-S6-qG4"/>
-                                <exclude reference="DVt-n2-hih"/>
                                 <exclude reference="0IX-Qo-OEs"/>
                                 <exclude reference="ipl-ku-ecG"/>
                                 <exclude reference="Phq-2a-ILb"/>
@@ -883,6 +882,7 @@
                                 <exclude reference="v0F-2c-8Lx"/>
                                 <exclude reference="rD1-5f-At4"/>
                                 <exclude reference="kZA-oX-WTY"/>
+                                <exclude reference="DVt-n2-hih"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=compact">
@@ -907,7 +907,6 @@
                                 <include reference="LRE-Db-1Pa"/>
                                 <include reference="ngM-2V-6mY"/>
                                 <include reference="Zvx-S6-qG4"/>
-                                <include reference="DVt-n2-hih"/>
                                 <include reference="0IX-Qo-OEs"/>
                                 <include reference="ipl-ku-ecG"/>
                                 <include reference="Phq-2a-ILb"/>
@@ -921,6 +920,7 @@
                                 <include reference="v0F-2c-8Lx"/>
                                 <include reference="rD1-5f-At4"/>
                                 <include reference="kZA-oX-WTY"/>
+                                <include reference="DVt-n2-hih"/>
                             </mask>
                         </variation>
                     </view>

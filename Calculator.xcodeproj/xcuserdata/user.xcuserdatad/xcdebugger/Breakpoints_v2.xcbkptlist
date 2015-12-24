@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Calculator/LandscapeContoller.m"
-            timestampString = "472476135.747345"
+            timestampString = "472641181.232888"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "229"
-            endingLineNumber = "229"
+            startingLineNumber = "231"
+            endingLineNumber = "231"
             landmarkName = "-equals:"
             landmarkType = "5">
          </BreakpointContent>
@@ -26,12 +26,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Calculator/LandscapeContoller.m"
-            timestampString = "472561966.110972"
+            timestampString = "472641181.232888"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "414"
-            endingLineNumber = "414"
-            landmarkName = "-executeOperation:withResultedString:"
+            startingLineNumber = "416"
+            endingLineNumber = "416"
+            landmarkName = "-evaluateTrigonometricFunctions"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -42,12 +42,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Calculator/LandscapeContoller.m"
-            timestampString = "472561966.110972"
+            timestampString = "472641181.232888"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "445"
-            endingLineNumber = "445"
-            landmarkName = "-executeOperation:withResultedString:"
+            startingLineNumber = "447"
+            endingLineNumber = "447"
+            landmarkName = "-evaluateTrigonometricFunctions"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -58,12 +58,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Calculator/LandscapeContoller.m"
-            timestampString = "472561966.110972"
+            timestampString = "472641181.232888"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "441"
-            endingLineNumber = "441"
-            landmarkName = "-executeOperation:withResultedString:"
+            startingLineNumber = "443"
+            endingLineNumber = "443"
+            landmarkName = "-evaluateTrigonometricFunctions"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

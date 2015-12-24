@@ -112,6 +112,8 @@
     Screen.text = [Screen.text stringByAppendingString:@"+"];
 }
 -(IBAction)equals:(id)sender{
+    CurrOperLabel.text = [NSString stringWithFormat:@"%@", Screen.text];
+    
     do {
     
         [self replaceConstants];
@@ -549,6 +551,7 @@
     continueCounting = NO;
     
     Screen.text = [NSString stringWithFormat:@""];
+    CurrOperLabel.text = [NSString stringWithFormat:@""];
 }
 
 - (IBAction)changeToPosNeg:(id)sender {
